@@ -1,2 +1,0 @@
-# brain-quiz
-quiz applicartion
