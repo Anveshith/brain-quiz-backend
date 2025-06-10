@@ -4,6 +4,7 @@ import os
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
+
 )
 
 from pathlib import Path
@@ -89,14 +90,11 @@ LOGIN_URL = 'login'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
@@ -133,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/' # url
+STATIC_URL = '/static/' # url
 STATIC_ROOT = BASE_DIR / 'staticfiles'# production
 
 STATICFILES_DIRS = [
@@ -149,10 +147,10 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+if not DEBUG:
+            AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+            AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 # AWS_S3_REGION_NAME = 'us-east-2' 
 
 AWS_S3_FILE_OVERWRITE = False
