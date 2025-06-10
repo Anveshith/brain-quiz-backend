@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemistry Quiz | Quiz - BrainBunny</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>ta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>itle>Newton's Laws Quiz | Quiz - BrainBunny</title>
+    <h1 class="display-4 text-center my-5">Chemistry Quiz</h1>lpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <div class="container">K94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <form id="quizForm">
+            <div id="questionsContainer"></div>
+            <button type="submit" class="btn btn-primary mt-3">Submit the quiz</button>
+        </form>"container text-center my-2 d-sm-block d-lg-none">
+        <div id="result" class="mt-4 fs-4 fw-bold"></div>asic outlined example">
+    </div>  <a href="./index.html" class="btn btn-outline-primary">Home</a>
+<script>    <a href="./all-quiz.html" class="btn btn-outline-primary">Quiz</a>
+const questions = [="./leaderboard.html" class="btn btn-outline-primary">Leaderboard</a>
+    {       <a href="./login.html" class="btn btn-outline-primary">Login</a>
+        text: "What is the chemical symbol for water?",
+        options: ["H<sub>2</sub>O", "O<sub>2</sub>", "CO<sub>2</sub>", "NaCl"],
+        answer: 0avbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
+    },  <div class="container">
+    {       <a class="navbar-brand" href="./index.html">BrainBunny</a>
+        text: "Which gas do plants absorb from the atmosphere?",-toggle="collapse"
+        options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],="navbarSupportedContent" aria-expanded="false"
+        answer: 2ria-label="Toggle navigation">
+    },          <span class="navbar-toggler-icon"></span>
+    {       </button>
+        text: "What is the pH value of pure water?",="navbarSupportedContent">
+        options: ["7", "1", "14", "0"],e-auto mb-2 mb-lg-0">
+        answer: 0   <li class="nav-item">
+    },                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+    {               </li>
+        text: "Which element is needed for hemoglobin in blood?",
+        options: ["Iron", "Calcium", "Sodium", "Potassium"],.html">Quiz</a>
+        answer: 0   </li>
+    },              <li class="nav-item">
+    {                   <a class="nav-link" href="./leaderboard.html">Leaderboard</a>
+        text: "What is the main gas found in the air we breathe?",
+        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
+        answer: 0       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+    },                      aria-expanded="false">
+    {                       Other
+        text: "Which of these is a noble gas?",
+        options: ["Helium", "Hydrogen", "Nitrogen", "Oxygen"],
+        answer: 0           <li><a class="dropdown-item" href="#">Blog</a></li>
+    },                      <li><a class="dropdown-item" href="#">About</a></li>
+    {                       <li>
+        text: "What is the chemical formula for table salt?",
+        options: ["NaCl", "KCl", "NaCO<sub>3</sub>", "CaCl<sub>2</sub>"],
+        answer: 0           <li><a class="dropdown-item" href="#">Downloads</a></li>
+    },                  </ul>
+    {               </li>
+        text: "Which scientist is known as the father of modern chemistry?",
+        options: ["Antoine Lavoisier", "Isaac Newton", "Albert Einstein", "Marie Curie"],
+        answer: 0   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    },              <button class="btn btn-outline-success" type="submit">Search</button>
+    {               <a href="./login.html" class="btn btn-primary ms-2">Login</a>
+        text: "What is the atomic number of carbon?",
+        options: ["6", "12", "8", "16"],
+        answer: 0
+    },nav>
+    {
+        text: "Which of these is an acid?",Newton's Laws Quiz</h1>
+        options: ["HCl", "NaOH", "KOH", "CaCO<sub>3</sub>"],
+        answer: 0"quizForm">
+    }       <div id="questionsContainer"></div>
+];          <button type="submit" class="btn btn-primary mt-3">Submit the quiz</button>
+        </form>
+function renderQuestions() {ss="mt-4 fs-4 fw-bold"></div>
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    questions.forEach((q, idx) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'card mb-2'; three laws of motion?",
+        qDiv.innerHTML = `ac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+            <div class="card-header fw-bold">Question ${idx + 1}</div>
+            <div class="card-body">
+                <p class="card-text">${q.text}</p>
+                ${q.options.map((opt, oidx) => `state?",
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="q${idx}" value="${oidx}">
+                            <span>${opt}</span>otion unless acted upon by an external force",
+                        </label>e created or destroyed"
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(qDiv);s why passengers lurch forward in a car when it stops suddenly?",
+    });     options: [
+}               "Newton's First Law",
+                "Newton's Second Law",
+document.getElementById('quizForm').addEventListener('submit', function(e) {
+    e.preventDefault(); Gravitation"
+    let score = 0;
+    const form = e.target;
+    const resultDiv = document.getElementById('result');
+    // Remove previous highlights
+    document.querySelectorAll('.card-body').forEach(el => {Law?",
+        el.querySelectorAll('.form-check-label').forEach(lbl => {
+            lbl.style.color = '';
+            lbl.style.fontWeight = '';
+        });     "F = a/m",
+    });         "F = m + a"
+            ],
+    questions.forEach((q, idx) => {
+        const selected = form.querySelector(`input[name="q${idx}"]:checked`);
+        const cardBody = form.querySelectorAll('.card-body')[idx];
+        const labels = cardBody.querySelectorAll('.form-check-label');
+        if (selected) {
+            const selectedIdx = parseInt(selected.value);opposite reaction",
+            if (selectedIdx === q.answer) {st",
+                labels[selectedIdx].style.color = 'green';
+                labels[selectedIdx].style.fontWeight = 'bold';
+                score += 1;
+            } else {0
+                labels[selectedIdx].style.color = 'red';
+                labels[selectedIdx].style.fontWeight = 'bold';
+                labels[q.answer].style.color = 'green'; of Newton's Third Law?",
+                labels[q.answer].style.fontWeight = 'bold';
+            }   "A rocket launching into space",
+        } else {"A ball rolling down a hill",
+            // Not attempted: show only correct answer in green
+            labels[q.answer].style.color = 'green';
+            labels[q.answer].style.fontWeight = 'bold';
+        }   answer: 0
+    }); },
+    resultDiv.textContent = `You got ${score} out of ${questions.length} correct.`;
+    // Disable all inputs after submit
+    form.querySelectorAll('input[type="radio"]').forEach(inp => inp.disabled = true);
+    form.querySelector('button[type="submit"]').disabled = true; motion",
+
+
+
+
+
+
+</html></body></script>renderQuestions();});                "The force that pulls objects toward Earth",
+                "The speed of an object",
+                "The energy of motion"
+            ],
+            answer: 0
+        },
+        {
+            text: "Which law is also known as the law of inertia?",
+            options: [
+                "Newton's First Law",
+                "Newton's Second Law",
+                "Newton's Third Law",
+                "Law of Gravity"
+            ],
+            answer: 0
+        },
+        {
+            text: "If you push on a wall, what does Newton's Third Law say the wall does?",
+            options: [
+                "Pushes back with equal force",
+                "Moves away",
+                "Does nothing",
+                "Increases friction"
+            ],
+            answer: 0
+        },
+        {
+            text: "Which of the following best describes Newton's Second Law?",
+            options: [
+                "The acceleration of an object depends on the net force and its mass",
+                "For every action, there is an equal and opposite reaction",
+                "Objects at rest stay at rest",
+                "Gravity pulls objects toward Earth"
+            ],
+            answer: 0
+        }
+    ];
+
+    function renderQuestions() {
+        const container = document.getElementById('questionsContainer');
+        container.innerHTML = '';
+        questions.forEach((q, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'card mb-2';
+            qDiv.innerHTML = `
+                <div class="card-header fw-bold">Question ${idx + 1}</div>
+                <div class="card-body">
+                            </label>  <p class="card-text">${q.text}</p>
+                        </div>((opt, oidx) => `
+                    `).join('')}
+                </div>abel class="form-check-label">
+            `;          <span>${opt}</span>          <input class="form-check-input" type="radio" name="q${idx}" value="${oidx}">
+            container.appendChild(qDiv);
+        });
+    }
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let score = 0;="card-body">
+        const form = e.target;ton's Third Law is commonly stated as:</p>
+        const resultDiv = document.getElementById('result');
+        // Remove previous highlights
+        document.querySelectorAll('.card-body').forEach(el => {ut class="form-check-input" type="radio" name="q5"> For every action, there is an equal and opposite reaction
+            el.querySelectorAll('.form-check-label').forEach(lbl => {label>
+                lbl.style.color = '';
+                lbl.style.fontWeight = '';
+            });
+        });ut class="form-check-input" type="radio" name="q5"> Objects at rest stay at rest
+label>
+        questions.forEach((q, idx) => {
+            const selected = form.querySelector(`input[name="q${idx}"]:checked`);
+            const cardBody = form.querySelectorAll('.card-body')[idx];
+            const labels = cardBody.querySelectorAll('.form-check-label');ut class="form-check-input" type="radio" name="q5"> Force equals mass times acceleration
+            if (selected) {label>
+                const selectedIdx = parseInt(selected.value);div>
+                if (selectedIdx === q.answer) {  <div class="form-check">
+                    labels[selectedIdx].style.color = 'green';s="form-check-label">
+                    labels[selectedIdx].style.fontWeight = 'bold';eck-input" type="radio" name="q5"> Energy is conserved
+                    score += 1;l>
+                } else {div>
+                    labels[selectedIdx].style.color = 'red';
+                    labels[selectedIdx].style.fontWeight = 'bold';
+                    labels[q.answer].style.color = 'green';
+                    labels[q.answer].style.fontWeight = 'bold';
+                }
+            } else {
+                // Not attempted: show only correct answer in green="card-body">
+                labels[q.answer].style.color = 'green';ch of the following is an example of Newton's Third Law?</p>
+                labels[q.answer].style.fontWeight = 'bold';
+            }
+        });ut class="form-check-input" type="radio" name="q6"> A rocket launching into space
+        resultDiv.textContent = `You got ${score} out of ${questions.length} correct.`;label>
+        // Disable all inputs after submit
+        form.querySelectorAll('input[type="radio"]').forEach(inp => inp.disabled = true);
+        form.querySelector('button[type="submit"]').disabled = true;
+    });ut class="form-check-input" type="radio" name="q6"> A ball rolling down a hill
+label>
+    renderQuestions();
+    </script>
+
+    <footer class="py-3 my-4">ut class="form-check-input" type="radio" name="q6"> A car accelerating
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">label>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>div>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>  <div class="form-check">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>s="form-check-label">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>eck-input" type="radio" name="q6"> Water boiling
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>l>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Feedback</a></li>div>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023, BrainBunny</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>="card-body">
+</body>t is inertia?</p>
+
+</html>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
