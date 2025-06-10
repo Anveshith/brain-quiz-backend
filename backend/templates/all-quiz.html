@@ -1,4 +1,6 @@
 {% extends 'index.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
 {% block title %}All Quizzes - BrainBunny{% endblock title %}
 
@@ -34,8 +36,7 @@
 						<p class="card-text">{{quiz.description|truncatewords:7}}</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<a href="{% url 'quiz' quiz.id %}" type="button" class="btn btn-sm btn-outline-success">Start
-									Quiz</a>
+								<a href="{% url 'quiz_view' quiz_id=quiz.id %}" class="btn btn-sm btn-outline-success">Start Quiz</a>
 							</div>
 							<small class="text-body-secondary">{{quiz.created_at|timesince}} ago</small>
 						</div>
@@ -49,6 +50,54 @@
 			</div>
 			{% endif %}
 		</div>
+	</div>
+
+	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+	    <div class="col">
+	        <div class="card shadow-sm">
+	            <div class="card-body">
+	                <h4>Newton Quiz</h4>
+	                <p class="card-text">Total Questions - 10</p>
+	                <p class="card-text">Test your knowledge of Newton's Laws!</p>
+	                <div class="d-flex justify-content-between align-items-center">
+	                    <div class="btn-group">
+	                        <a href="/quiz/1/" class="btn btn-sm btn-outline-success">Start Quiz</a>
+	                    </div>
+	                    <small class="text-body-secondary">2 weeks ago</small>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col">
+	        <div class="card shadow-sm">
+	            <div class="card-body">
+	                <h4>Chem Quiz</h4>
+	                <p class="card-text">Total Questions - 10</p>
+	                <p class="card-text">Challenge yourself with Chemistry questions!</p>
+	                <div class="d-flex justify-content-between align-items-center">
+	                    <div class="btn-group">
+	                        <a href="/quiz/2/" class="btn btn-sm btn-outline-success">Start Quiz</a>
+	                    </div>
+	                    <small class="text-body-secondary">1 week ago</small>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col">
+	        <div class="card shadow-sm">
+	            <div class="card-body">
+	                <h4>English Quiz</h4>
+	                <p class="card-text">Total Questions - 10</p>
+	                <p class="card-text">Improve your English skills!</p>
+	                <div class="d-flex justify-content-between align-items-center">
+	                    <div class="btn-group">
+	                        <a href="/quiz/3/" class="btn btn-sm btn-outline-success">Start Quiz</a>
+	                    </div>
+	                    <small class="text-body-secondary">5 days ago</small>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
 	</div>
 
 {% endblock content %}
