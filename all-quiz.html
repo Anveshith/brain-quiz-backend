@@ -160,6 +160,27 @@
 		</div>
 	</div>
 
+	<div class="container my-5">
+		<h1>Select a Quiz</h1>
+		<form method="post">
+			<label>
+				<input type="radio" name="quiz" value="newton" required>
+				Newton Quiz
+			</label><br>
+			<label>
+				<input type="radio" name="quiz" value="chem">
+				Chem Quiz
+			</label><br>
+			<label>
+				<input type="radio" name="quiz" value="english">
+				English Quiz
+			</label><br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+		{% if selected_quiz %}
+		<p>You selected: <strong>{{ selected_quiz }}</strong></p>
+		{% endif %}
+	</div>
 
 	<footer class="py-3 my-4">
 		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
